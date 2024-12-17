@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --section-red: #ad0101;
+    --section-cyan: #eaf8f9;
+    --scroll: 0px;
+}
+
+.bg-red {
+    background-color: var(--section-red);
+}
+
+.bg-cyan {
+    background-color: var(--section-cyan);
+}
+
+.trees-pattern {
+    background-position-x: calc(var(--scroll) * -1) !important;
+}
+
+.snow-pattern {
+    background-position-y: calc(var(--scroll) * 1.5);
+}
+
+.trees-pattern {
+    background: url("../images/trees_pattern_01.png");
+    background-size: cover;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: calc(100vw / 5);
+    background-position-x: calc(var(--scroll) * -2);
+    margin-top: 2em;
+}
+
+.cloud-pattern {
+    background: url("../images/section_footer.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: #ad0101;
+    width: 100%;
+    height: calc(100vw / 10);
+}
+
+.snow-pattern {
+    background-image: url("../images/snow_pattern.png"),
+        url("../images/snow_pattern2.png");
+    background-repeat: repeat-y;
+    background-position-y: calc(var(--scroll) * 2);
+}

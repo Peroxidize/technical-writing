@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -562,12 +566,24 @@ video {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .m-auto {
@@ -606,6 +622,11 @@ video {
   height: 100%;
 }
 
+.h-min {
+  height: -moz-min-content;
+  height: min-content;
+}
+
 .w-2 {
   width: 0.5rem;
 }
@@ -624,6 +645,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-4 {
@@ -942,6 +967,37 @@ video {
         url("../images/snow_pattern2.png");
   background-repeat: repeat-y;
   background-position-y: calc(var(--scroll) * 2);
+}
+
+.menu {
+  background: url("../images/menu_item_normal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: relative;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.menu:hover {
+  background: url("../images/menu_item_active.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu:hover::after {
+  content: attr(tooltip);
+  color: white;
+  font-size: 13px;
+  position: absolute;
+  right: 20px;
+  margin-top: -9px;
+  background-color: #7BD300;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  white-space: nowrap;
 }
 
 .hover\:scale-\[103\%\]:hover {

@@ -49,3 +49,34 @@
     background-repeat: repeat-y;
     background-position-y: calc(var(--scroll) * 2);
 }
+
+.menu {
+    background: url("../images/menu_item_normal.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: relative;
+    min-width: 10px;
+    min-height: 10px;
+}
+
+.menu:hover {
+    background: url("../images/menu_item_active.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu:hover::after {
+    content: attr(tooltip);
+    color: white;
+    font-size: 13px;
+    position: absolute;
+    right: 20px;
+    margin-top: -9px;
+    background-color: #7BD300;
+    padding: 0.25em 0.75em;
+    border-radius: 1em;
+    white-space: nowrap;
+}

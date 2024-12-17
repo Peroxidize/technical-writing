@@ -71,7 +71,8 @@
 .menu:hover::after {
     content: attr(tooltip);
     color: white;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: bold;
     position: absolute;
     right: 20px;
     margin-top: -9px;
